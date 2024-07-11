@@ -1,17 +1,21 @@
 
-const express = require('express')
-const app = express()
-const port = 3000
+//////////////////estudar ////////////////////////
+//////////atv no sigaa///////////////////////////
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+
+// -->  https://www.freecodecamp.org/portuguese/news/tutorial-de-fetch-api-em-javascript-exemplos-de-post-e-cabecalho/
+//  --> https://expressjs.com/pt-br/guide/routing.html
+// --> https://expressjs.com/pt-br/starter/installing.html
+
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
+
+fetch("http://localhost:3000/bjj",{
+
+    method: "GET",
+    headers: {"Content-type": "application/json; charset=UTF-8"}
+
 })
-
-app.post('/bjj', (req, res) => {
-    res.send('Hello Earth!')
-  })
-  
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+.then(response => response.json()) 
+.then(json => console.log(json))
+.catch(err => console.log(err));
