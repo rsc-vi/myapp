@@ -10,7 +10,7 @@ let abagaras = {
   endereco : "Cunjunto Demorisvaldo QL N°17 rua11, Mata do Rolo, Rio Largo(AL)"
 } 
 
-app.get('bjj', (req, res) => {
+app.get('/bjj', (req, res) => {
   res.send(abagaras)
 })
 
