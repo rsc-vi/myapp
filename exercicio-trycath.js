@@ -21,4 +21,7 @@ try {
     carregando = false;
     console.log("ABAGARAS")
 
+    
 }
+
+ 
